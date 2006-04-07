@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+#!/usr/local/bin/perl -w
 
 use strict;
 use XML::Validate qw();
@@ -6,7 +6,7 @@ use Getopt::Long qw();
 require Log::Trace;
 
 use vars qw($VERSION);
-($VERSION) = ('$Revision: 1.9 $' =~ /([\d\.]+)/ );
+($VERSION) = ('$Revision: 1.10 $' =~ /([\d\.]+)/ );
 
 my $assert_invalid = 0;
 my $help = 0;
@@ -110,15 +110,15 @@ Output is Test::Harness compatible.
 
 =head1 VERSION
 
-$Revision: 1.9 $
+$Revision: 1.10 $
 
-$Id: validxml.pl,v 1.9 2006/03/17 11:45:11 colinr Exp $
+$Id: validxml.pl,v 1.10 2006/04/07 09:43:10 johnl Exp $
 
 =head1 AUTHOR
 
 Nicola Worthington
 
-$Author: colinr $
+$Author: johnl $
 
 =head1 COPYRIGHT
 

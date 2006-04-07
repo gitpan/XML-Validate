@@ -16,7 +16,7 @@ getopts("tT");
 
 plan tests => 11;
 
-chdir($1) if ($0 =~ /(.*)\/(.*)/);
+chdir($1) if ($0 =~ /(.*)(\/|\\)(.*)/);
 unshift @INC, "../lib";
 
 require XML::Validate;

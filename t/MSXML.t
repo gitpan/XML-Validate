@@ -67,7 +67,7 @@ my $validator = new XML::Validate::MSXML();
 $validator->validate($valid_XML);
 my $dom = $validator->last_dom();
 DUMP("DOM Document type",Win32::OLE->QueryObjectType($dom));
-ASSERT(Win32::OLE->QueryObjectType($dom) eq 'IXMLDOMDocument2','Valid XML parsed');
+ASSERT(Win32::OLE->QueryObjectType($dom) =~ m/^IXMLDOMDocument\d+/,'Valid XML parsed');
 ASSERT(!$validator->last_error, 'Valid XML leaves no error');
 
 # invalid XML fails an exception and returns an error record
@@ -86,7 +86,7 @@ my $DOM = $validator->last_dom();
 ASSERT($DOM->documentElement(), "Returned DOM can call documentElement method");
 
 # Validate against external entities
-ASSERT(Win32::OLE->QueryObjectType($DOM) eq 'IXMLDOMDocument2','Valid XML parsed on external');
+ASSERT(Win32::OLE->QueryObjectType($DOM) =~ m/^IXMLDOMDocument\d+/,'Valid XML parsed on external');
 ASSERT(!$validator->last_error, 'Valid XML with external DTD leaves no error');
 ASSERT(!$validator->validate($invalid_XML_externalDTD),'Invalid XML parsed on external');
 DUMP("Invalid XML error", $validator->last_error);

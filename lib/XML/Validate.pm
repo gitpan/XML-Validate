@@ -1,6 +1,4 @@
-#
 # Factory class providing a common interface to different XML validators
-#
 
 package XML::Validate;
 
@@ -12,7 +10,7 @@ use strict;
 use XML::Validate::Base;
 use vars qw($VERSION);
 
-$VERSION = sprintf"%d.%03d", q$Revision: 1.23 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.24 $ =~ /: (\d+)\.(\d+)/;
 
 # Xerces is preferred over MSXML as we've found in practice that MSXML4's schema validation occasionally
 # lets through invalid documents which Xerces catches.
@@ -214,7 +212,7 @@ report can be viewed here http://rt.cpan.org/Public/Bug/Display.html?id=16213
 
 =head1 VERSION
 
-$Revision: 1.23 $ on $Date: 2006/04/06 08:56:18 $ by $Author: mattheww $
+$Revision: 1.24 $ on $Date: 2006/04/07 12:21:08 $ by $Author: mattheww $
 
 =head1 AUTHOR
 
