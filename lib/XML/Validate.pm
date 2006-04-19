@@ -10,7 +10,7 @@ use strict;
 use XML::Validate::Base;
 use vars qw($VERSION);
 
-$VERSION = sprintf"%d.%03d", q$Revision: 1.24 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf"%d.%03d", q$Revision: 1.25 $ =~ /: (\d+)\.(\d+)/;
 
 # Xerces is preferred over MSXML as we've found in practice that MSXML4's schema validation occasionally
 # lets through invalid documents which Xerces catches.
@@ -212,7 +212,7 @@ report can be viewed here http://rt.cpan.org/Public/Bug/Display.html?id=16213
 
 =head1 VERSION
 
-$Revision: 1.24 $ on $Date: 2006/04/07 12:21:08 $ by $Author: mattheww $
+$Revision: 1.25 $ on $Date: 2006/04/19 10:16:19 $ by $Author: mattheww $
 
 =head1 AUTHOR
 
@@ -226,4 +226,3 @@ E<lt>cpan _at_ bbc _dot_ co _dot_ ukE<gt>
 See the file COPYING in this distribution, or http://www.gnu.org/licenses/gpl.txt
 
 =cut
-

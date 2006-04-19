@@ -8,7 +8,7 @@ use XML::Validate::Base;
 use vars qw( $VERSION @ISA $MSXML_VERSION);
 
 @ISA = qw( XML::Validate::Base );
-$VERSION = sprintf'%d.%03d', q$Revision: 1.17 $ =~ /: (\d+)\.(\d+)/;
+$VERSION = sprintf'%d.%03d', q$Revision: 1.18 $ =~ /: (\d+)\.(\d+)/;
 
 use constant XSI_NS => 'xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"';
 
@@ -221,6 +221,20 @@ Returns the MSXML DOM object of the document last validated.
 Returns the error from the last validate call. This is a hash ref with the
 following fields:
 
+=item create_doc_and_cache()
+
+Internal method for instantiation of MSXML DOMDocument and SchemaCache objects
+for use within the module.
+ 
+=item dependencies_available()
+
+Internal method to determine that the necessary dependencies are available for
+instantiation of MSXML DOMDocument and SchemaCache objects.
+
+=item load_schemas($msxml, $msxmlcache)
+
+Internal method to perform loading of XML schema(s) into SchemaCache object.
+
 =over
 
 =item *
@@ -276,7 +290,7 @@ Win32::OLE, MSXML 4.0 or 5.0
 
 =head1 VERSION
 
-$Revision: 1.17 $ on $Date: 2005/10/07 07:59:53 $ by $Author: johna $
+$Revision: 1.18 $ on $Date: 2006/04/18 10:00:31 $ by $Author: mattheww $
 
 =head1 AUTHOR
 

@@ -1,3 +1,6 @@
+Wed Apr 19 11:16:38 2006 - 1.025
+    Added POD coverage to XML::Validate::MSXML
+
 Fri Apr  7 13:08:01 2006 - 1.024
     Minor modifications to t/validate.t and t/libxml.t to allow to work in a Windows environment.
 
